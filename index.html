@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Page</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 20%;
+        }
+        footer {
+            margin-top: 20px; /* Add margin to the top */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meomory Test!</h1>
+        <p>This place smells like ____ tumour.</p>
+        <form onsubmit="return checkAnswer(event)">
+            <input type="text" id="answer" required>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+        <footer>All this is because I want ONLY you to access the stuff ahead.</footer>
+    </div>
+
+    <script>
+        function checkAnswer(event) {
+            event.preventDefault(); // Prevent default form submission
+            var answer = document.getElementById('answer').value.toLowerCase();
+            if (answer === 'anal') {
+                window.location.href = "page3.html";
+            } else {
+                window.location.href = "page2.html";
+            }
+        }
+    </script>
+</body>
+</html>
